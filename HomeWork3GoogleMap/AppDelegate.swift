@@ -13,8 +13,6 @@ import GooglePlaces
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-//AIzaSyBflupIiNjLMgF_f5WxwU39m3GHM25uZR0
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         GMSServices.provideAPIKey("AIzaSyBflupIiNjLMgF_f5WxwU39m3GHM25uZR0")

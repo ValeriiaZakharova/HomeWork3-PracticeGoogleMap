@@ -26,7 +26,7 @@ class Storage {
     
     func makeUser1() -> User {
         
-        let user1 = User(latitude: 23.000045, longitude: 34.875567)
+        let user1 = User(latitude: 50.200045, longitude: 30.355567)
         user1.name = "Pavel"
         user1.surName = "Kravtcov"
         user1.city = "Kharkiv"
@@ -38,7 +38,7 @@ class Storage {
     
     func makeUser2() -> User {
         
-        let user2 = User(latitude: 23.000045, longitude: 34.875567)
+        let user2 = User(latitude: 50.000045, longitude: 30.875567)
         user2.name = "Aleksandra"
         user2.surName = "Chernyshova"
         user2.city = "Kharkiv"
@@ -50,7 +50,7 @@ class Storage {
     
     func makeUser3() -> User {
            
-           let user3 = User(latitude: 23.000045, longitude: 34.875567)
+           let user3 = User(latitude: 50.600045, longitude: 30.775567)
            user3.name = "Harri"
            user3.surName = "Sokk"
            user3.city = "Kharkiv"
@@ -62,7 +62,7 @@ class Storage {
     
     func makeUser4() -> User {
               
-              let user4 = User(latitude: 23.000045, longitude: 34.875567)
+              let user4 = User(latitude: 50.200045, longitude: 30.275567)
               user4.name = "Dariia"
               user4.surName = "Striy"
               user4.city = "Kharkiv"
@@ -74,7 +74,7 @@ class Storage {
     
     func makeUser5() -> User {
         
-        let user5 = User(latitude: 23.000045, longitude: 34.875567)
+        let user5 = User(latitude: 50.500045, longitude: 30.675567)
         user5.name = "Sasha"
         user5.surName = "Popova"
         user5.city = "Kharkiv"
