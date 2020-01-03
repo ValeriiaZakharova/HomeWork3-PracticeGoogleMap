@@ -21,7 +21,7 @@ class Storage {
         let user4 = makeUser4()
         let user5 = makeUser5()
         
-        return [user1, user2, user3, user4, user5]
+        return [user1, user5, user3, user4, user2]
     }
     
     func makeUser1() -> User {

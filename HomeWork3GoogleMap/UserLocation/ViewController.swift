@@ -22,17 +22,11 @@ class MapModel {
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var mapView: GMSMapView!
     
     @IBOutlet weak var imgeButton: UIImageView!
-    
-//    var users: [User] = []
-//    var markers: [GMSMarker] = []
-    
-    //var userCamera: User?
-    var latitude: Double = 0.0
-    var longitude: Double = 0.0
+
+    var cameraLocation: CLLocationCoordinate2D?
     var models: [MapModel] = []
     
     override func viewDidLoad() {
@@ -47,10 +41,10 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        print("hello")
-        let camera1 = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 14.2)
-        mapView.camera = camera1
-
+        if let location = cameraLocation {
+            let camera1 = GMSCameraPosition.camera(withTarget: location, zoom: 14.2)
+            mapView.camera = camera1
+        }
     }
     
     @IBAction func didTapGoToUsersList(_ sender: Any) {
@@ -84,7 +78,7 @@ extension ViewController {
         return models
     }
     
-    func setupCamera() {
+    func setupCamera()  {
         for model in models {
             let camera = GMSCameraPosition.camera(withLatitude: model.user.latitude, longitude: model.user.longitude, zoom: 9.2)
             mapView.camera = camera

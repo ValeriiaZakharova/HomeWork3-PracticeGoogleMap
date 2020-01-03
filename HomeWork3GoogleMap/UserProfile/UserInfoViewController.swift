@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import CoreLocation
 
 class UserInfoViewController: UIViewController {
     
@@ -63,8 +64,7 @@ class UserInfoViewController: UIViewController {
         let vc = storyboardMain.instantiateViewController(identifier: "ViewController") as! ViewController
         
         if let user1 = user {
-            vc.longitude = user1.longitude
-            vc.latitude = user1.latitude
+            vc.cameraLocation = CLLocationCoordinate2D(latitude: user1.latitude, longitude: user1.longitude)
         }
         
         navigationController?.pushViewController(vc, animated: true)
