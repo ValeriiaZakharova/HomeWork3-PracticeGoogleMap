@@ -30,6 +30,9 @@ class ViewController: UIViewController {
 //    var users: [User] = []
 //    var markers: [GMSMarker] = []
     
+    //var userCamera: User?
+    var latitude: Double = 0.0
+    var longitude: Double = 0.0
     var models: [MapModel] = []
     
     override func viewDidLoad() {
@@ -39,6 +42,15 @@ class ViewController: UIViewController {
         
         setupCamera()
         mapView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        print("hello")
+        let camera1 = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 14.2)
+        mapView.camera = camera1
+
     }
     
     @IBAction func didTapGoToUsersList(_ sender: Any) {
